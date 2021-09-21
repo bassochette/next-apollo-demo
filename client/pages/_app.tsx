@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { NextPage } from "next";
 import { AppProps } from "next/app";
 import { store } from "../redux/store";
-import "../styles/home.scss";
+import "../styles/styles.scss";
 
 interface MyAppProps extends AppProps {}
 

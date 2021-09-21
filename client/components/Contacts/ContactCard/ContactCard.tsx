@@ -8,5 +8,12 @@ export interface ContactCardProps {
 export const ContactCard: FunctionComponent<ContactCardProps> = ({
   contact,
 }) => {
-  return <>{contact.name}</>;
+  return (
+    <div>
+      <div>{contact.name}</div>
+      <div>{contact.phone}</div>
+      <div>{contact.email}</div>
+      <div>{contact.address}</div>
+    </div>
+  );
 };
