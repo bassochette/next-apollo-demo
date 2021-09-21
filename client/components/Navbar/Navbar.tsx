@@ -4,7 +4,6 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { debounce } from "lodash";
 import { useDispatch } from "react-redux";
 import * as styles from "./navbar.module.scss";
 import { searchContactPage } from "../../redux/actions/searchContactsActions";
@@ -17,6 +16,7 @@ export const Navbar: FunctionComponent = () => {
     setQuery(event.target.value);
     // TODO: debounce!
     searchContactPage({
+      clear: true,
       query: event.target.value,
       page: 0,
       dispatch,
