@@ -1,9 +1,4 @@
-import React, {
-  FunctionComponent,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import React, { FunctionComponent, useState } from "react";
 import { useDispatch } from "react-redux";
 import * as styles from "./navbar.module.scss";
 import { searchContactPage } from "../../redux/actions/searchContactsActions";
