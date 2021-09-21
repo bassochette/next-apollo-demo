@@ -17,14 +17,14 @@ const paginate = (
 
 export const ContactResolvers = {
   Query: {
-    get: (): Contact[] => {
+    getContacts: (): Contact[] => {
       return contacts;
     },
-    getPage: (parent, args): PaginatedContacts => {
+    getContactsPage: (parent, args): PaginatedContacts => {
       const { page, pageSize = 20 } = args;
       return paginate(contacts, page, pageSize);
     },
-    searchByName: (parent, args): PaginatedContacts => {
+    searchContactsByName: (parent, args): PaginatedContacts => {
       const { query, page, pageSize } = args;
       const selectedContacts = filter(contacts, (contact) => {
         return contact.name.toLowerCase().includes(query.toLowerCase());

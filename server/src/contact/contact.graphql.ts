@@ -16,8 +16,12 @@ export const ContactTypeDefs = gql`
   }
 
   type Query {
-    get: [Contact!]
-    getPage(page: Int!, pageSize: Int): PaginatedContacts
-    searchByName(query: String!, page: Int, pageSize: Int): PaginatedContacts
+    getContacts: [Contact!]
+    getContactsPage(page: Int!, pageSize: Int): PaginatedContacts
+    searchContactsByName(
+      query: String!
+      page: Int
+      pageSize: Int
+    ): PaginatedContacts
   }
 `;
