@@ -1,9 +1,5 @@
 import { FunctionComponent } from "react";
 
-export interface NavbarProps {
-  // TODO
-}
-
-export const Navbar: FunctionComponent<NavbarProps> = () => {
-  return <>navbar</>;
+export const Navbar: FunctionComponent = () => {
+  return <section></section>;
 };

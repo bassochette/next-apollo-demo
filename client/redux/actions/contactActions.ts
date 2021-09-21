@@ -43,7 +43,7 @@ export const getContactPage = async ({
 
     dispatch(getContactPageSuccessAction(data.getContactsPage));
   } catch (error) {
-    console.log(error.networkError.result.errors);
+    console.error(error);
     dispatch(getContactPageErrorAction(error));
   }
 };

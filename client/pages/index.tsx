@@ -1,11 +1,7 @@
 import { FunctionComponent, useEffect } from "react";
 import { useDispatch } from "react-redux";
-
 import { Navbar } from "../components/Navbar/Navbar";
-import {
-  getContactPage,
-  getContactPageAction,
-} from "../redux/actions/contactActions";
+import { getContactPage } from "../redux/actions/contactActions";
 import { Contacts } from "../components/Contacts/Contacts";
 
 const Home: FunctionComponent = () => {
@@ -15,7 +11,7 @@ const Home: FunctionComponent = () => {
   }, []);
 
   return (
-    <div>
+    <div className="page-container">
       <Navbar />
       <Contacts />
     </div>
