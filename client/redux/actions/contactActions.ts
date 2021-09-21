@@ -41,8 +41,11 @@ export const getContactPage = async ({
         pageSize,
       },
     });
-
-    dispatch(getContactPageSuccessAction(data.getContactsPage));
+    if (error) {
+      dispatch(getContactPageErrorAction(error));
+    } else {
+      dispatch(getContactPageSuccessAction(data.getContactsPage));
+    }
   } catch (error) {
     console.error(error);
     dispatch(getContactPageErrorAction(error));

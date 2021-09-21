@@ -2,22 +2,39 @@ import { FunctionComponent, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { State } from "../../../redux/store";
 import { getContactPage } from "../../../redux/actions/contactActions";
+import { searchContactPage } from "../../../redux/actions/searchContactsActions";
 import * as styles from "./loadNextContactPage.module.scss";
 
 export const LoadNextContactPage: FunctionComponent = () => {
   const dispatch = useDispatch();
-  const { currentPage, pageCount } = useSelector(
+  const { currentPage, pageCount, query } = useSelector(
     (state: State) => state.contacts
   );
-  const loadNextPage = useCallback(async () => {
-    getContactPage({ page: currentPage + 1, dispatch });
-  }, [currentPage]);
+  const noMorePage = pageCount !== 0 && currentPage + 1 === pageCount;
 
-  if (pageCount !== 0 && currentPage === pageCount) return <></>;
+  const loadNextPage = useCallback(async () => {
+    if (noMorePage) return;
+    if (query) {
+      searchContactPage({
+        query,
+        page: currentPage + 1,
+        dispatch,
+        clear: false,
+      });
+    } else {
+      getContactPage({ page: currentPage + 1, dispatch });
+    }
+  }, [currentPage, query, noMorePage]);
 
   return (
-    <div onClick={loadNextPage} className={styles["load-more-button"]}>
-      load more button
+    <div
+      onClick={loadNextPage}
+      className={`${styles["load-more-button"]} ${
+        noMorePage && styles.disabled
+      }`.trim()}
+    >
+      {!noMorePage && "load more button"}
+      {noMorePage && "That's all folks!"}
     </div>
   );
 };
