@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
-export const GET_CONTACT_PAGE = gql`
+export const GET_CONTACT_PAGE_QUERY = gql`
   query GetContactsPage($page: Int!, $pageSize: Int) {
-    getPage(page: $page, pageSize: $pageSize) {
+    getContactsPage(page: $page, pageSize: $pageSize) {
       contacts {
         name
         address

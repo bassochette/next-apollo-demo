@@ -5,4 +5,5 @@ const apolloClient = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+export const client = apolloClient;
 export default apolloClient;
