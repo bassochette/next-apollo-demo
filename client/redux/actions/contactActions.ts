@@ -37,7 +37,8 @@ export const getContactPage = async ({
     const { error, data } = await client.query({
       query: GET_CONTACT_PAGE_QUERY,
       variables: {
-        page: 0,
+        page,
+        pageSize,
       },
     });
 

@@ -1,0 +1,12 @@
+@import "../../../styles/colors";
+
+.load-more-button {
+  padding: 1em 1.5em;
+  margin: 1em;
+  background-color: $invert-highlight-text-color;
+  border-radius: 8px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

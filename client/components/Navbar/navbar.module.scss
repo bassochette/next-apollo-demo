@@ -1,0 +1,18 @@
+@import "../../styles/colors";
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: $invert-highlight-text-color;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+}
+
+.search-box {
+  height: 30px;
+  width: 25vw;
+  min-width: 250px;
+}
