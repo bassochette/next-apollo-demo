@@ -10,3 +10,4 @@ node_modules
 # Artefacts
 dist
 coverage
+.next
