@@ -1,0 +1,27 @@
+@import "../../../styles/animations";
+
+.loader {
+  animation: pulse 1.5s infinite ease-in-out;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 15px 5px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.field {
+  border-radius: 6px;
+  margin: 0.3em;
+  width: 80%;
+  height: 2em;
+  background-color: #d0d6d5;
+  padding: 0em 1em;
+  display: flex;
+  align-items: center;
+}
