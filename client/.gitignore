@@ -1,0 +1,13 @@
+node_modules
+
+# IDE
+.idea
+*.tmp
+
+# OSX
+.DS_Store
+
+# Artefacts
+dist
+coverage
+.next
