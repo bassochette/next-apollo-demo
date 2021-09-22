@@ -31,6 +31,10 @@ graphqlServer.start().then(() => {
   app.use(bodyParser.json());
   app.use(morgan("tiny"));
 
+  app.get("/", (req, res) => {
+    res.send("OK");
+  });
+
   graphqlServer.applyMiddleware({ app });
 
   const port = process.env.PORT || 5000;

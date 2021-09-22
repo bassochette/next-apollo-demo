@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "start": "npm run build && node dist/server",
+    "start": "node dist/server",
     "start:dev": "npm run build:dev",
     "build": "tsc",
     "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql",
