@@ -21,7 +21,8 @@ COPY . ./
 # build
 RUN npm run build
 
-EXPOSE 5000
+ENV PORT=5000
+EXPOSE $PORT
 
 # Run the web service on container startup.
 CMD [ "npm", "start" ]

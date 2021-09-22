@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p $PORT",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "license": "MIT",
   "dependencies": {

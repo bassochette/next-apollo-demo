@@ -35,7 +35,6 @@ graphqlServer.start().then(() => {
 
   const port = process.env.PORT || 5000;
   app.listen(port, () => {
-    console.log("SERVER ENV", process.env);
     console.log(
       `Graphql Server started on: http://localhost:${port}${graphqlServer.graphqlPath}
 Graphql playground: https://studio.apollographql.com/sandbox/explorer/`
