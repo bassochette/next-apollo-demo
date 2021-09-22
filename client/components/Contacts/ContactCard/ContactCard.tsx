@@ -8,6 +8,7 @@ import {
   faEnvelopeSquare,
   faPhoneSquareAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { Address } from "./Address/Address";
 
 export interface ContactCardProps {
   contact: Contact;
@@ -18,17 +19,20 @@ export const ContactCard: FunctionComponent<ContactCardProps> = ({
 }) => {
   return (
     <div className={styles["card-container"]}>
-      <div>{contact.name}</div>
-      <div>
-        <FontAwesomeIcon icon={faPhoneSquareAlt} /> {contact.phone}
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faEnvelopeSquare} />
-        {contact.email}
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faAddressBook} />
-        {contact.address}
+      <div className={styles["name"]}>{contact.name}</div>
+      <div className={styles["info-container"]}>
+        <div className={styles["info"]}>
+          <FontAwesomeIcon icon={faPhoneSquareAlt} className={styles["icon"]} />{" "}
+          {contact.phone}
+        </div>
+        <div className={styles["info"]}>
+          <FontAwesomeIcon icon={faEnvelopeSquare} className={styles["icon"]} />
+          {contact.email}
+        </div>
+        <div className={styles["info"]}>
+          <FontAwesomeIcon icon={faAddressBook} className={styles["icon"]} />
+          <Address address={contact.address} />
+        </div>
       </div>
     </div>
   );
