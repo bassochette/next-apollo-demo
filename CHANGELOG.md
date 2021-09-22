@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/bassochette/next-apollo-demo/compare/v0.0.2...v0.0.3) (2021-09-22)
+
+
+### Features
+
+* **client:** rework card style and responsive font size ([991020b](https://github.com/bassochette/next-apollo-demo/commit/991020b0267af0df65bedce6b02c09759e01864e))
+* **client:** update search box style ([7dba182](https://github.com/bassochette/next-apollo-demo/commit/7dba182bcb8be8cf312d6f956e1e63e0f9d9f51a))
+* **server:** start will not build + respond OK on / ([4a78240](https://github.com/bassochette/next-apollo-demo/commit/4a782406909c20756ab69516a06168da6c44e478))
+
 ### [0.0.2](https://github.com/bassochette/next-apollo-demo/compare/v0.0.1...v0.0.2) (2021-09-21)
 
 
