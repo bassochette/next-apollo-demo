@@ -6,7 +6,6 @@ export interface AddressProps {
 
 export const Address: FunctionComponent<AddressProps> = ({ address }) => {
   const splittedOnNewLine = address.split("\n");
-  console.log(address, splittedOnNewLine);
   return (
     <div>
       {splittedOnNewLine.map((l) => (

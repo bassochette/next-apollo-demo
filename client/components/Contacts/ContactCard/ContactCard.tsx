@@ -18,7 +18,7 @@ export const ContactCard: FunctionComponent<ContactCardProps> = ({
   contact,
 }) => {
   return (
-    <div className={styles["card-container"]}>
+    <div className={styles["card-container"]} data-cy="contact">
       <div className={styles["name"]}>{contact.name}</div>
       <div className={styles["info-container"]}>
         <div className={styles["info"]}>

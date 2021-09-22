@@ -25,6 +25,7 @@ export const Navbar: FunctionComponent = () => {
         className={styles["search-box"]}
         value={query}
         onChange={_onChange}
+        data-cy="search"
       />
     </section>
   );

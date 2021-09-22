@@ -32,6 +32,7 @@ export const LoadNextContactPage: FunctionComponent = () => {
       className={`${styles["load-more-button"]} ${
         noMorePage && styles["disabled"]
       }`.trim()}
+      data-cy="next-page-button"
     >
       {!noMorePage && "load more button"}
       {noMorePage && "That's all folks!"}

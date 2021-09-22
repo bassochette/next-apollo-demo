@@ -24,7 +24,7 @@ const ContactSkeleton: FunctionComponent = () => (
 
 export const ContactsLoader: FunctionComponent = () => {
   return (
-    <div className={styles["loader"]}>
+    <div className={styles["loader"]} data-cy="loader">
       <ContactSkeleton />
       <ContactSkeleton />
       <ContactSkeleton />
