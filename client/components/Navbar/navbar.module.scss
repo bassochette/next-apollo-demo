@@ -15,4 +15,10 @@
   height: 30px;
   width: 25vw;
   min-width: 250px;
+  border-radius: 6px;
+  border: none;
+
+  &::placeholder {
+    text-align: center;
+  }
 }

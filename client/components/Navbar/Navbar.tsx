@@ -26,6 +26,7 @@ export const Navbar: FunctionComponent = () => {
         value={query}
         onChange={_onChange}
         data-cy="search"
+        placeholder="search contacts"
       />
     </section>
   );
