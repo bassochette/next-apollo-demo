@@ -28,6 +28,6 @@ module.exports = {
     ];
   },
   publicRuntimeConfig: {
-    GRAPHQL_URL: process.env.GRAPHQL_URL,
+    GRAPHQL_URL: process?.env?.GRAPHQL_URL || "http://localhost:5000/graphql",
   },
 };
