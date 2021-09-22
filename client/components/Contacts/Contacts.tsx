@@ -7,7 +7,6 @@ import { LoadNextContactPage } from "./LoadNextContactPage/LoadNextContactPage";
 
 export const Contacts = () => {
   const state = useSelector((state: State) => state.contacts);
-  console.log("C", JSON.stringify(state.contacts));
   return (
     <section className={styles["contacts-container"]} data-cy="contacts">
       <div className={styles["contact-cards-container"]}>
