@@ -7,7 +7,8 @@
     "start": "npm run build && node dist/server",
     "start:dev": "npm run build:dev",
     "build": "tsc",
-    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql"
+    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "apollo-server-express": "3.3.0",

@@ -6,7 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "heroku-postbuild": "next build"
   },
   "license": "MIT",
   "dependencies": {
